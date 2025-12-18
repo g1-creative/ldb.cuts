@@ -1,0 +1,140 @@
+.contact-hero {
+  background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-secondary) 100%);
+  text-align: center;
+}
+
+.contact-intro {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.contact-content {
+  background-color: var(--color-secondary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.contact-info h2 {
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+}
+
+.contact-item {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-item:last-of-type {
+  border-bottom: none;
+}
+
+.contact-item h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.125rem;
+  color: var(--color-primary);
+}
+
+.contact-item address {
+  font-style: normal;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.contact-link {
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--color-text-light);
+  text-decoration: underline;
+}
+
+.hours p {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.hours strong {
+  color: var(--color-primary);
+}
+
+.hours-note {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-top: var(--spacing-sm);
+}
+
+.contact-cta {
+  margin-top: var(--spacing-xl);
+}
+
+.contact-cta .btn {
+  width: 100%;
+  font-size: 1.125rem;
+  padding: var(--spacing-md);
+}
+
+.contact-map {
+  position: sticky;
+  top: 100px;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.map-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.map-link {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 967px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map {
+    position: static;
+    order: -1;
+  }
+
+  .map-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-container {
+    height: 300px;
+  }
+}
+

@@ -1,0 +1,115 @@
+.about-hero {
+  background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-secondary) 100%);
+  text-align: center;
+}
+
+.about-content {
+  background-color: var(--color-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about-text h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.about-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.about-image {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e5e5e5 0%, #d5d5d5 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.image-placeholder span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.image-placeholder p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.about-values {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-values h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.value-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.value-item h3 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.value-item p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 967px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    order: -1;
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
