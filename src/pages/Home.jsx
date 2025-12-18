@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaScissors, FaStar, FaUsers, FaMapMarkerAlt, FaPhone, FaStar as FaStarIcon } from 'react-icons/fa'
+import { FaCut, FaStar, FaUsers, FaMapMarkerAlt, FaPhone, FaStar as FaStarIcon } from 'react-icons/fa'
 import BooksyWidget from '../components/BooksyWidget'
 import './Home.css'
 
@@ -73,7 +73,7 @@ const Home = () => {
               <div className="image-placeholder-overlay"></div>
               <div className="placeholder-content">
                 <div className="placeholder-icon">
-                  <FaScissors />
+                  <FaCut />
                 </div>
                 <span>Professional Barbershop</span>
                 <p>Add your hero image here</p>
@@ -93,7 +93,7 @@ const Home = () => {
             <div className="feature-card card">
               <div className="feature-icon-wrapper">
                 <div className="feature-icon">
-                  <FaScissors />
+                  <FaCut />
                 </div>
               </div>
               <h3>Master Barbers</h3>

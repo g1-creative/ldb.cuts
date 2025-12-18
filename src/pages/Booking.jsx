@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import { 
   FaCalendarAlt, 
-  FaScissors, 
+  FaCut, 
   FaClock, 
   FaCheckCircle, 
   FaSyncAlt, 
@@ -53,7 +52,7 @@ const Booking = () => {
                     <span>View Real-Time Availability</span>
                   </div>
                   <div className="booksy-feature">
-                    <FaScissors className="feature-icon" />
+                    <FaCut className="feature-icon" />
                     <span>Choose Your Service</span>
                   </div>
                   <div className="booksy-feature">

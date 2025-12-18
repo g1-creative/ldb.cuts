@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import { FaCalendarAlt, FaScissors, FaCheckCircle } from 'react-icons/fa'
+import { FaCalendarAlt, FaCut, FaCheckCircle } from 'react-icons/fa'
 import './BooksyWidget.css'
 
 const BooksyWidget = ({ variant = 'inline', className = '' }) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
   const booksyUrl = 'https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs'
 
   const openBooksy = () => {
@@ -48,7 +46,7 @@ const BooksyWidget = ({ variant = 'inline', className = '' }) => {
                 <span>View Available Times</span>
               </div>
               <div className="booksy-feature">
-                <FaScissors className="feature-icon" />
+                <FaCut className="feature-icon" />
                 <span>Select Your Service</span>
               </div>
               <div className="booksy-feature">

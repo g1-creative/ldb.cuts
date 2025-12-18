@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom'
 import { 
-  FaScissors, 
-  FaCrown, 
   FaCut, 
-  FaBarberShop, 
+  FaCrown, 
+  FaStore, 
   FaBolt, 
   FaChild, 
   FaUser, 
-  FaRazor,
+  FaCut as FaRazor,
   FaClock,
   FaStar
 } from 'react-icons/fa'
@@ -22,7 +21,7 @@ const Services = () => {
       price: '$50',
       description: 'Complete grooming experience including haircut, beard trim, hot towel, and styling',
       featured: true,
-      Icon: FaScissors
+      Icon: FaCut
     },
     { 
       name: 'Royal Service', 
@@ -36,14 +35,14 @@ const Services = () => {
 
   const hairServices = [
     { name: 'Regular Haircut', duration: '30 min', price: '$25', Icon: FaScissors },
-    { name: 'Skin Fade', duration: '35 min', price: '$30', Icon: FaBarberShop },
+    { name: 'Skin Fade', duration: '35 min', price: '$30', Icon: FaStore },
     { name: 'Taper', duration: '30 min', price: '$25', Icon: FaCut },
     { name: 'Buzz Cut', duration: '20 min', price: '$18', Icon: FaBolt },
   ]
 
   const comboServices = [
     { name: 'Haircut + Beard', duration: '45 min', price: '$35', Icon: FaScissors },
-    { name: 'Skin Fade + Beard', duration: '50 min', price: '$40', Icon: FaBarberShop },
+    { name: 'Skin Fade + Beard', duration: '50 min', price: '$40', Icon: FaStore },
     { name: 'Haircut & Eyebrows', duration: '35 min', price: '$30', Icon: FaScissors },
   ]
 
@@ -98,7 +97,7 @@ const Services = () => {
         <div className="container">
           <div className="service-category">
             <h2 className="category-title">
-              <FaScissors className="category-icon" />
+              <FaCut className="category-icon" />
               Haircuts
             </h2>
             <div className="decorative-line"></div>
@@ -123,7 +122,7 @@ const Services = () => {
 
           <div className="service-category">
             <h2 className="category-title">
-              <FaBarberShop className="category-icon" />
+              <FaStore className="category-icon" />
               Combo Services
             </h2>
             <div className="decorative-line"></div>
