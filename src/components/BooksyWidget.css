@@ -1,0 +1,53 @@
+.booksy-button-wrapper {
+  display: inline-block;
+}
+
+.booksy-button {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.booksy-button:hover {
+  background-color: #2a2a2a;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.booksy-widget-container {
+  width: 100%;
+  min-height: 700px;
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-secondary);
+}
+
+.booksy-iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .booksy-widget-container {
+    min-height: 500px;
+  }
+  
+  .booksy-widget iframe {
+    min-height: 500px;
+  }
+}
+

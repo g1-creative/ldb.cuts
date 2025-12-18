@@ -61,15 +61,13 @@ const Header = () => {
             >
               Contact
             </Link>
-            <a 
-              href="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/booking" 
               className="btn btn-primary nav-cta"
               onClick={closeMenu}
             >
               Book Now
-            </a>
+            </Link>
           </nav>
 
           <button 

@@ -78,6 +78,23 @@
   padding: var(--spacing-md) var(--spacing-xl);
 }
 
+.services-booking {
+  background-color: var(--color-bg-light);
+}
+
+.services-booking-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.services-booking-widget {
+  margin-top: var(--spacing-lg);
+}
+
 @media (max-width: 767px) {
   .services-grid {
     grid-template-columns: 1fr;

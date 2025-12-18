@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import BooksyWidget from '../components/BooksyWidget'
 import './Home.css'
 
 const Home = () => {
@@ -14,14 +15,12 @@ const Home = () => {
               committed to your satisfaction.
             </p>
             <div className="hero-cta">
-              <a 
-                href="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/booking"
                 className="btn btn-primary"
               >
                 Book an Appointment
-              </a>
+              </Link>
               <a 
                 href="tel:+12394657270" 
                 className="btn btn-secondary"
@@ -67,19 +66,35 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="booking-preview section">
+        <div className="container">
+          <h2 className="section-title">Book Your Appointment</h2>
+          <p className="booking-preview-intro">
+            Select your service, choose your preferred date and time, and book instantly. 
+            All appointments are confirmed immediately.
+          </p>
+          <div className="booking-preview-widget">
+            <BooksyWidget variant="inline" />
+          </div>
+          <div className="booking-preview-cta">
+            <Link to="/booking" className="btn btn-secondary">
+              View Full Booking Page
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="cta-section section">
         <div className="container">
           <div className="cta-content">
             <h2>Ready for Your Next Cut?</h2>
             <p>Book your appointment today and experience the LDB Cuts difference.</p>
-            <a 
-              href="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/booking"
               className="btn btn-primary"
             >
               Book Now
-            </a>
+            </Link>
           </div>
         </div>
       </section>

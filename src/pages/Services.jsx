@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import BooksyWidget from '../components/BooksyWidget'
 import './Services.css'
 
 const Services = () => {
@@ -43,14 +45,24 @@ const Services = () => {
           </div>
           
           <div className="services-cta">
-            <a 
-              href="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              to="/booking"
               className="btn btn-primary"
             >
               Book Now
-            </a>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="services-booking section">
+        <div className="container">
+          <h2 className="section-title">Ready to Book?</h2>
+          <p className="services-booking-intro">
+            View all available services, select your preferred time, and book your appointment directly below.
+          </p>
+          <div className="services-booking-widget">
+            <BooksyWidget variant="inline" />
           </div>
         </div>
       </section>
