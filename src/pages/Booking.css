@@ -17,19 +17,137 @@
 
 .booksy-widget-container {
   width: 100%;
-  min-height: 800px;
   margin-bottom: var(--spacing-2xl);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  background-color: var(--color-secondary);
 }
 
-.booksy-iframe {
+.booksy-widget-preview {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-2xl);
+  text-align: center;
+}
+
+.booksy-preview-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.booksy-preview-header h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.booksy-preview-header p {
+  color: var(--color-text-light);
+  font-size: 1.125rem;
+}
+
+.booksy-preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.booksy-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
   width: 100%;
-  min-height: 800px;
+  max-width: 800px;
+  margin-bottom: var(--spacing-md);
+}
+
+.booksy-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius);
+}
+
+.booksy-feature .feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.booksy-feature span:not(.feature-icon) {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 500;
+  text-align: center;
+}
+
+.booksy-open-button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
-  display: block;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--border-radius);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-md);
+  min-width: 300px;
+}
+
+.booksy-open-button:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.booksy-note {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+}
+
+.booksy-alternative {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.booksy-alternative p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-light);
+}
+
+.booksy-direct-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.booksy-direct-link:hover {
+  color: var(--color-text-light);
+}
+
+@media (max-width: 767px) {
+  .booksy-widget-preview {
+    padding: var(--spacing-lg);
+  }
+
+  .booksy-features {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .booksy-open-button {
+    width: 100%;
+    min-width: auto;
+    padding: var(--spacing-md);
+    font-size: 1.25rem;
+  }
 }
 
 .booking-info {

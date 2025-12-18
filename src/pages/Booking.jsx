@@ -1,6 +1,23 @@
+import { useState } from 'react'
 import './Booking.css'
 
 const Booking = () => {
+  const booksyUrl = 'https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs'
+
+  const openBooksy = () => {
+    // Open Booksy in a new window with specific dimensions
+    const width = 1200
+    const height = 800
+    const left = (window.screen.width - width) / 2
+    const top = (window.screen.height - height) / 2
+    
+    window.open(
+      booksyUrl,
+      'BooksyBooking',
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    )
+  }
+
   return (
     <div className="booking-page">
       <section className="booking-hero section">
@@ -16,13 +33,52 @@ const Booking = () => {
       <section className="booking-widget-section section">
         <div className="container">
           <div className="booksy-widget-container">
-            <iframe
-              src="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs"
-              className="booksy-iframe"
-              title="Book Appointment - LDB Cuts Barbershop"
-              allow="payment"
-              loading="lazy"
-            />
+            <div className="booksy-widget-preview">
+              <div className="booksy-preview-header">
+                <h2>Ready to Book?</h2>
+                <p>Click the button below to open our booking system in a new window</p>
+              </div>
+              <div className="booksy-preview-content">
+                <div className="booksy-features">
+                  <div className="booksy-feature">
+                    <span className="feature-icon">📅</span>
+                    <span>View Real-Time Availability</span>
+                  </div>
+                  <div className="booksy-feature">
+                    <span className="feature-icon">✂️</span>
+                    <span>Choose Your Service</span>
+                  </div>
+                  <div className="booksy-feature">
+                    <span className="feature-icon">⏰</span>
+                    <span>Select Date & Time</span>
+                  </div>
+                  <div className="booksy-feature">
+                    <span className="feature-icon">✅</span>
+                    <span>Instant Confirmation</span>
+                  </div>
+                </div>
+                <button 
+                  className="booksy-open-button"
+                  onClick={openBooksy}
+                >
+                  Open Booking System
+                </button>
+                <p className="booksy-note">
+                  The booking system will open in a new window for your convenience
+                </p>
+                <div className="booksy-alternative">
+                  <p>Or book directly on Booksy:</p>
+                  <a 
+                    href={booksyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="booksy-direct-link"
+                  >
+                    Visit Booksy Booking Page
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="booking-info">

@@ -16,7 +16,8 @@
 
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-weight: 700;
   color: var(--color-primary);
   transition: var(--transition);
@@ -24,6 +25,17 @@
 
 .logo:hover {
   opacity: 0.8;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-text {
@@ -108,6 +120,18 @@
 }
 
 @media (max-width: 767px) {
+  .logo-image {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.75rem;
+  }
+
   .menu-toggle {
     display: flex;
   }

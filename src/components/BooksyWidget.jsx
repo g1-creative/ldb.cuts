@@ -1,54 +1,71 @@
-import { useEffect } from 'react'
+import { useState } from 'react'
 import './BooksyWidget.css'
 
 const BooksyWidget = ({ variant = 'inline', className = '' }) => {
-  useEffect(() => {
-    // Booksy widget script - this loads the official Booksy booking widget
-    const scriptId = 'booksy-widget-script'
-    const existingScript = document.getElementById(scriptId)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const booksyUrl = 'https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs'
+
+  const openBooksy = () => {
+    // Open Booksy in a new window with specific dimensions
+    const width = 1200
+    const height = 800
+    const left = (window.screen.width - width) / 2
+    const top = (window.screen.height - height) / 2
     
-    if (!existingScript) {
-      const script = document.createElement('script')
-      script.id = scriptId
-      script.src = 'https://booksy.com/widget/code.js'
-      script.setAttribute('data-type', 'inline')
-      script.setAttribute('data-account', '1073297')
-      script.setAttribute('data-service', '15815')
-      script.async = true
-      document.body.appendChild(script)
-    }
-    
-    return () => {
-      // Don't remove script on unmount as it may be used by other components
-    }
-  }, [])
+    window.open(
+      booksyUrl,
+      'BooksyBooking',
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    )
+  }
 
   if (variant === 'button') {
     return (
       <div className={`booksy-button-wrapper ${className}`}>
-        <a
+        <button
           className="booksy-button"
-          href="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={openBooksy}
         >
           Book Appointment
-        </a>
+        </button>
       </div>
     )
   }
 
   if (variant === 'inline') {
-    // Use iframe for inline booking experience
     return (
       <div className={`booksy-widget-container ${className}`}>
-        <iframe
-          src="https://booksy.com/en-us/1073297_ldbcuts-barbershop_barber-shop_15815_bonita-springs"
-          className="booksy-iframe"
-          title="Book Appointment - LDB Cuts Barbershop"
-          allow="payment"
-          loading="lazy"
-        />
+        <div className="booksy-widget-preview">
+          <div className="booksy-preview-header">
+            <h3>Book Your Appointment</h3>
+            <p>Click below to open our booking system</p>
+          </div>
+          <div className="booksy-preview-content">
+            <div className="booksy-features">
+              <div className="booksy-feature">
+                <span className="feature-icon">📅</span>
+                <span>View Available Times</span>
+              </div>
+              <div className="booksy-feature">
+                <span className="feature-icon">✂️</span>
+                <span>Select Your Service</span>
+              </div>
+              <div className="booksy-feature">
+                <span className="feature-icon">✅</span>
+                <span>Instant Confirmation</span>
+              </div>
+            </div>
+            <button 
+              className="booksy-open-button"
+              onClick={openBooksy}
+            >
+              Open Booking System
+            </button>
+            <p className="booksy-note">
+              Booking opens in a new window for your convenience
+            </p>
+          </div>
+        </div>
       </div>
     )
   }

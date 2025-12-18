@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import logoImage from '../images/logo and favicon.png'
 import './Header.css'
 
 const Header = () => {
@@ -21,8 +22,11 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo" onClick={closeMenu}>
-            <span className="logo-text">LDB Cuts</span>
-            <span className="logo-subtitle">Barbershop</span>
+            <img src={logoImage} alt="LDB Cuts Barbershop" className="logo-image" />
+            <div className="logo-text-container">
+              <span className="logo-text">LDB Cuts</span>
+              <span className="logo-subtitle">Barbershop</span>
+            </div>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
