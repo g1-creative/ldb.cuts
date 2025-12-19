@@ -5,31 +5,31 @@ const Gallery = () => {
   // Barbershop-related images from Unsplash
   const parallaxImages = [
     {
-      src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1280&h=720&fit=crop&auto=format&q=80',
       alt: 'Professional barber cutting hair',
     },
     {
-      src: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1280&h=720&fit=crop&auto=format&q=80',
       alt: 'Barbershop interior with vintage style',
     },
     {
-      src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&fit=crop&auto=format&q=80',
       alt: 'Precision fade haircut',
     },
     {
-      src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1280&h=720&fit=crop&auto=format&q=80',
       alt: 'Barber tools and equipment',
     },
     {
-      src: 'https://images.unsplash.com/photo-1622296242080-2f42d8412c22?w=800&h=800&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&h=800&fit=crop&auto=format&q=80',
       alt: 'Modern barbershop styling',
     },
     {
-      src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1280&h=720&fit=crop&auto=format&q=80',
       alt: 'Beard grooming and trimming',
     },
     {
-      src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1280&h=720&fit=crop&crop=entropy&auto=format&q=80',
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1280&h=720&fit=crop&auto=format&q=80',
       alt: 'Professional haircut service',
     },
   ]
