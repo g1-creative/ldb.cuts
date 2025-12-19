@@ -36,7 +36,8 @@
 
 /* Individual image positioning - matching reference implementation */
 .zoom-parallax-image-0 {
-  /* Default center position */
+  /* Default center position - no special positioning needed */
+  position: relative;
 }
 
 .zoom-parallax-image-1 {

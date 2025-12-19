@@ -4,7 +4,20 @@
 }
 
 .about-content {
-  background-color: var(--color-secondary);
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content .container {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-3xl);
+  border-radius: var(--border-radius-xl);
+  margin: var(--spacing-xl) auto;
+  box-shadow: var(--shadow-xl);
 }
 
 .about-grid {

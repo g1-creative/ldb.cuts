@@ -1,3 +1,4 @@
+import BeamsBackground from '../components/BeamsBackground'
 import './About.css'
 
 const About = () => {
@@ -10,6 +11,7 @@ const About = () => {
       </section>
 
       <section className="about-content section">
+        <BeamsBackground className="section-background" intensity="medium">
         <div className="container">
           <div className="about-grid">
             <div className="about-text">
@@ -68,6 +70,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        </BeamsBackground>
       </section>
     </div>
   )
