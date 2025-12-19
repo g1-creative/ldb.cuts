@@ -29,6 +29,9 @@
   gap: var(--spacing-lg);
   width: max-content;
   animation: scroll-right 20s linear infinite;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @keyframes scroll-right {
@@ -79,5 +82,30 @@
 /* Pause animation on hover */
 .image-auto-slider:hover .image-auto-slider-scroll {
   animation-play-state: paused;
+}
+
+/* Speed up animation on mobile */
+@media (max-width: 767px) {
+  .image-auto-slider-scroll {
+    animation: scroll-right 8s linear infinite;
+    gap: var(--spacing-md);
+  }
+
+  .image-auto-slider-item {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-auto-slider-scroll {
+    animation: scroll-right 6s linear infinite;
+    gap: var(--spacing-sm);
+  }
+
+  .image-auto-slider-item {
+    width: 140px;
+    height: 140px;
+  }
 }
 
