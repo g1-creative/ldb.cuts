@@ -74,13 +74,15 @@ const Services = () => {
                 <div key={index} className="featured-service-card card card-premium">
                   <div className="featured-service-content">
                     <div className="featured-service-image">
-                      <div className="image-placeholder">
-                        <div className="image-placeholder-overlay"></div>
-                        <div className="placeholder-content">
-                          <IconComponent className="placeholder-service-icon" />
-                          <span>{service.name}</span>
-                        </div>
-                      </div>
+                      <img 
+                        src={index === 0 
+                          ? 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700&h=500&fit=crop&auto=format&q=80'
+                          : 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=700&h=500&fit=crop&auto=format&q=80'
+                        }
+                        alt={service.name}
+                        className="featured-service-img"
+                      />
+                      <div className="featured-service-image-overlay"></div>
                     </div>
                     <div className="featured-service-info">
                       <div className="featured-service-icon">

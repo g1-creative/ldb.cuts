@@ -118,16 +118,11 @@ const Home = () => {
             </div>
           </div>
           <div className="hero-image">
-            <div className="image-placeholder">
-              <div className="image-placeholder-overlay"></div>
-              <div className="placeholder-content">
-                <div className="placeholder-icon">
-                  <FaCut />
-                </div>
-                <span>Professional Barbershop</span>
-                <p>Add your hero image here</p>
-              </div>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&h=800&fit=crop&auto=format&q=80"
+              alt="Professional barbershop - LDB Cuts"
+              className="hero-img"
+            />
           </div>
         </div>
       </section>

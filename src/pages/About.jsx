@@ -44,10 +44,11 @@ const About = () => {
             </div>
             
             <div className="about-image">
-              <div className="image-placeholder">
-                <span>Owner/Barber Photo Placeholder</span>
-                <p>Add photo of owner or barber here</p>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&auto=format&q=80"
+                alt="Professional barber at LDB Cuts"
+                className="about-img"
+              />
             </div>
           </div>
 

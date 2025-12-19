@@ -40,6 +40,24 @@
   overflow: hidden;
 }
 
+.featured-service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-service-card:hover .featured-service-img {
+  transform: scale(1.1);
+}
+
+.featured-service-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 .featured-service-image .image-placeholder {
   width: 100%;
   height: 100%;

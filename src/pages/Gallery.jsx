@@ -81,12 +81,30 @@ const Gallery = () => {
                 </div>
               </div>
             ))}
-            {/* Additional placeholder images */}
-            {Array.from({ length: imageCount }, (_, index) => (
-              <div key={`placeholder-${index}`} className="gallery-item">
-                <div className="image-placeholder">
-                  <span>Image {index + 1}</span>
-                  <p>Add haircut photo here</p>
+            {/* Additional gallery images */}
+            {[
+              'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&auto=format&q=80',
+              'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=800&fit=crop&auto=format&q=80',
+            ].map((imageSrc, index) => (
+              <div key={`gallery-${index}`} className="gallery-item gallery-item-image">
+                <img 
+                  src={imageSrc}
+                  alt={`Barbershop work ${index + 1}`}
+                  className="gallery-img"
+                  loading="lazy"
+                />
+                <div className="gallery-item-overlay">
+                  <span className="gallery-item-label">Professional Barbershop Work</span>
                 </div>
               </div>
             ))}
