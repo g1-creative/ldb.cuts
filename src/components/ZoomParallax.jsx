@@ -14,8 +14,10 @@ const ZoomParallax = ({ images = [] }) => {
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6])
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
+  // Middle image (index 3) should zoom the most to be the focal point
+  const scaleCenter = useTransform(scrollYProgress, [0, 1], [1, 10])
 
-  const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9]
+  const scales = [scale4, scale5, scale6, scaleCenter, scale6, scale8, scale9]
 
   if (!images || images.length === 0) {
     return null
@@ -28,11 +30,20 @@ const ZoomParallax = ({ images = [] }) => {
           const scale = scales[index % scales.length]
           const imageClass = `zoom-parallax-image zoom-parallax-image-${index}`
 
+          // Center image (index 3) needs special handling to stay centered
+          const isCenter = index === 3
+          
           return (
             <motion.div
               key={index}
-              style={{ scale }}
-              className="zoom-parallax-item"
+              style={{ 
+                scale,
+                ...(isCenter && {
+                  x: '-50%',
+                  y: '-50%',
+                })
+              }}
+              className={`zoom-parallax-item ${isCenter ? 'zoom-parallax-center' : ''}`}
             >
               <div className={imageClass}>
                 <img
