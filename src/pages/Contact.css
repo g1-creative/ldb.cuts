@@ -13,6 +13,7 @@
 
 .contact-content {
   background-color: var(--color-secondary);
+  color: var(--color-text);
 }
 
 .contact-grid {
@@ -22,9 +23,14 @@
   align-items: start;
 }
 
+.contact-info {
+  color: var(--color-text);
+}
+
 .contact-info h2 {
   margin-bottom: var(--spacing-xl);
   color: var(--color-primary);
+  font-size: 2rem;
 }
 
 .contact-item {
@@ -47,6 +53,8 @@
   font-style: normal;
   line-height: 1.8;
   color: var(--color-text);
+  font-size: 1rem;
+  display: block;
 }
 
 .contact-link {
@@ -61,10 +69,15 @@
   text-decoration: underline;
 }
 
+.hours {
+  color: var(--color-text);
+}
+
 .hours p {
   margin-bottom: var(--spacing-xs);
   line-height: 1.8;
   color: var(--color-text);
+  font-size: 1rem;
 }
 
 .hours strong {
