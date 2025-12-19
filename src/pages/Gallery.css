@@ -11,6 +11,25 @@
   line-height: 1.8;
 }
 
+.gallery-parallax-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg-light) 100%);
+  overflow: hidden;
+}
+
+.gallery-parallax-intro {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg-light) 100%);
+}
+
+.gallery-parallax-spacer {
+  height: 50vh;
+  background: linear-gradient(to bottom, var(--color-bg-light), var(--color-secondary));
+}
+
 .gallery-content {
   background-color: var(--color-secondary);
 }

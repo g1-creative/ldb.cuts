@@ -1,0 +1,190 @@
+.zoom-parallax-container {
+  position: relative;
+  height: 300vh;
+}
+
+.zoom-parallax-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-parallax-item {
+  position: absolute;
+  top: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-parallax-image {
+  position: relative;
+  height: 25vh;
+  width: 25vw;
+}
+
+.zoom-parallax-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Individual image positioning */
+.zoom-parallax-image-0 {
+  /* Default center position */
+}
+
+.zoom-parallax-image-1 {
+  top: -30vh;
+  left: 5vw;
+  height: 30vh;
+  width: 35vw;
+}
+
+.zoom-parallax-image-2 {
+  top: -10vh;
+  left: -25vw;
+  height: 45vh;
+  width: 20vw;
+}
+
+.zoom-parallax-image-3 {
+  left: 27.5vw;
+  height: 25vh;
+  width: 25vw;
+}
+
+.zoom-parallax-image-4 {
+  top: 27.5vh;
+  left: 5vw;
+  height: 25vh;
+  width: 20vw;
+}
+
+.zoom-parallax-image-5 {
+  top: 27.5vh;
+  left: -22.5vw;
+  height: 25vh;
+  width: 30vw;
+}
+
+.zoom-parallax-image-6 {
+  top: 22.5vh;
+  left: 25vw;
+  height: 15vh;
+  width: 15vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .zoom-parallax-container {
+    height: 200vh;
+  }
+
+  .zoom-parallax-image {
+    height: 20vh;
+    width: 30vw;
+  }
+
+  .zoom-parallax-image-1 {
+    top: -20vh;
+    left: 5vw;
+    height: 25vh;
+    width: 40vw;
+  }
+
+  .zoom-parallax-image-2 {
+    top: -5vh;
+    left: -20vw;
+    height: 35vh;
+    width: 25vw;
+  }
+
+  .zoom-parallax-image-3 {
+    left: 25vw;
+    height: 20vh;
+    width: 30vw;
+  }
+
+  .zoom-parallax-image-4 {
+    top: 20vh;
+    left: 5vw;
+    height: 20vh;
+    width: 25vw;
+  }
+
+  .zoom-parallax-image-5 {
+    top: 20vh;
+    left: -18vw;
+    height: 20vh;
+    width: 35vw;
+  }
+
+  .zoom-parallax-image-6 {
+    top: 18vh;
+    left: 20vw;
+    height: 12vh;
+    width: 20vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .zoom-parallax-container {
+    height: 150vh;
+  }
+
+  .zoom-parallax-image {
+    height: 15vh;
+    width: 40vw;
+  }
+
+  .zoom-parallax-image-1 {
+    top: -15vh;
+    left: 5vw;
+    height: 18vh;
+    width: 45vw;
+  }
+
+  .zoom-parallax-image-2 {
+    top: -5vh;
+    left: -15vw;
+    height: 25vh;
+    width: 30vw;
+  }
+
+  .zoom-parallax-image-3 {
+    left: 20vw;
+    height: 15vh;
+    width: 35vw;
+  }
+
+  .zoom-parallax-image-4 {
+    top: 15vh;
+    left: 5vw;
+    height: 15vh;
+    width: 30vw;
+  }
+
+  .zoom-parallax-image-5 {
+    top: 15vh;
+    left: -12vw;
+    height: 15vh;
+    width: 40vw;
+  }
+
+  .zoom-parallax-image-6 {
+    top: 12vh;
+    left: 15vw;
+    height: 10vh;
+    width: 25vw;
+  }
+}
+
