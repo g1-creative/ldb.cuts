@@ -25,11 +25,6 @@
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-bg-light) 100%);
 }
 
-.gallery-parallax-spacer {
-  height: 50vh;
-  background: linear-gradient(to bottom, var(--color-bg-light), var(--color-secondary));
-}
-
 .gallery-content {
   background-color: var(--color-secondary);
 }

@@ -57,7 +57,6 @@ const Gallery = () => {
           </p>
         </div>
         <ZoomParallax images={parallaxImages} />
-        <div className="gallery-parallax-spacer" />
       </section>
 
       {/* Traditional Gallery Grid */}
