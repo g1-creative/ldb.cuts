@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { FaCut, FaStar, FaUsers, FaMapMarkerAlt, FaPhone, FaStar as FaStarIcon } from 'react-icons/fa'
 import BooksyWidget from '../components/BooksyWidget'
+import Testimonials3D from '../components/Testimonials3D'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Home.css'
 
@@ -213,6 +214,7 @@ const Home = () => {
           <p className="section-subtitle">
             Don't just take our word for it – hear from our satisfied customers
           </p>
+          <Testimonials3D />
           <div className="testimonials-grid">
             {testimonials.map((testimonial, index) => (
               <div 
