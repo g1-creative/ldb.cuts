@@ -214,31 +214,8 @@ const Home = () => {
           <p className="section-subtitle">
             Don't just take our word for it – hear from our satisfied customers
           </p>
-          <Testimonials3D />
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                ref={(el) => (testimonialRefs.current[index] = el)}
-                className="testimonial-card card"
-              >
-                <div className="testimonial-stars">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStarIcon key={i} className="star" />
-                  ))}
-                </div>
-                <p className="testimonial-text">"{testimonial.review}"</p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div className="author-info">
-                    <h4>{testimonial.name}</h4>
-                    <span>Verified Customer</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="testimonials-3d-wrapper-section">
+            <Testimonials3D />
           </div>
         </div>
       </section>
